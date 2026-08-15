@@ -1,0 +1,18 @@
+Test_ID,Test_Name,Input_BPM,Expected_Status,LED_Status,Buzzer,OLED_Output,Expected_Result,Test_Status
+TC001,Normal BPM Test,75,NORMAL,Green ON,OFF,BPM: 75 | STATUS: NORMAL,Normal condition should work,PASS
+TC002,Normal BPM Test,80,NORMAL,Green ON,OFF,BPM: 80 | STATUS: NORMAL,Normal condition should work,PASS
+TC003,Low BPM Test,50,LOW,Red ON,ON,BPM: 50 | STATUS: LOW,Low BPM alert should activate,PASS
+TC004,Low BPM Test,55,LOW,Red ON,ON,BPM: 55 | STATUS: LOW,Low BPM alert should activate,PASS
+TC005,Low Threshold Test,59,LOW,Red ON,ON,BPM: 59 | STATUS: LOW,Alert should activate below 60 BPM,PASS
+TC006,Normal Threshold Test,60,NORMAL,Green ON,OFF,BPM: 60 | STATUS: NORMAL,60 BPM should remain normal,PASS
+TC007,Normal BPM Test,70,NORMAL,Green ON,OFF,BPM: 70 | STATUS: NORMAL,Normal condition should work,PASS
+TC008,High Threshold Test,100,NORMAL,Green ON,OFF,BPM: 100 | STATUS: NORMAL,100 BPM should remain normal,PASS
+TC009,High BPM Test,105,HIGH,Red ON,ON,BPM: 105 | STATUS: HIGH,High BPM alert should activate,PASS
+TC010,High BPM Test,110,HIGH,Red ON,ON,BPM: 110 | STATUS: HIGH,High BPM alert should activate,PASS
+TC011,OLED Display Test,75,NORMAL,Green ON,OFF,BPM: 75 | STATUS: NORMAL,OLED should display BPM and status,PASS
+TC012,Buzzer Test,50,LOW,Red ON,ON,BPM: 50 | STATUS: LOW,Buzzer should activate during alert,PASS
+TC013,Red LED Test,110,HIGH,Red ON,ON,BPM: 110 | STATUS: HIGH,Red LED should activate during alert,PASS
+TC014,Green LED Test,75,NORMAL,Green ON,OFF,BPM: 75 | STATUS: NORMAL,Green LED should activate during normal condition,PASS
+TC015,Serial Monitor Test,75,NORMAL,Green ON,OFF,BPM: 75 | STATUS: NORMAL,Serial Monitor should show BPM and status,PASS
+TC016,Alert Recovery Test,110 to 75,NORMAL,Green ON,OFF,BPM: 75 | STATUS: NORMAL,Alert should stop after BPM returns to normal,PASS
+TC017,Automatic Simulation Test,75 to 50 to 110,NORMAL/LOW/HIGH,Green/Red,OFF/ON,BPM and status updated,All three conditions should work,PASS
